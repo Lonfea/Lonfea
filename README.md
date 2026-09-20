@@ -43,7 +43,7 @@ My work sits at the intersection of **machine learning, environmental and biolog
 ## Technical stack
 
 **Programming & analytics**  
-`Python` · `SQL` · `Pandas` · `NumPy` · `Jupyter`
+`Python` · `SQL` · `Pandas` · `NumPy` · `Power BI` · `Streamlit` · `Jupyter`
 
 **Machine learning**  
 `PyTorch` · `scikit-learn` · `XGBoost` · `Deep Learning` · `Neural Networks` · `Transformers`
@@ -60,6 +60,7 @@ My work sits at the intersection of **machine learning, environmental and biolog
 
 | Project | What it demonstrates |
 |---|---|
+| 🧬 **[Clinical Trial Operations Analytics](https://github.com/Lonfea/clinical-trial-operations-analytics)** | Original end-to-end product: Python, SQL, ETL, Power BI, risk modeling, Streamlit, CI |
 | 🌳 **[Deforestation Detection](https://github.com/Lonfea/detect-deforestation)** | Sentinel-2, NDVI, satellite-image time series, CNNs, Transformers |
 | 🌊 **[AI-Driven Hydrological Modeling](https://github.com/Lonfea/camels-hydrological-modeling)** | CAMELS, streamflow forecasting, hydrological ML, decision support |
 | 🌡️ **[Climate Projection Downscaling](https://github.com/Lonfea/downscaling-climate-projections)** | Deep learning, climate projections, statistical downscaling |
