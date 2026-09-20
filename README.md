@@ -20,7 +20,7 @@
 
 ## About me
 
-I study **Business Management in Data Analytics and Artificial Intelligence**, building on a bachelor's background in **Biology**.
+I am an **MSc student in Business Management, Data Analytics and Artificial Intelligence at Steinbeis University in Berlin**, building on a **BSc in Biology from Istanbul University**.
 
 My work sits at the intersection of **machine learning, environmental and biological science, climate research, and data-driven decision-making**. I am especially interested in problems where AI can help turn complex scientific data into useful, interpretable decisions.
 
@@ -89,8 +89,10 @@ That means developing projects that are not only accurate, but also **reproducib
 
 ## Education
 
-- **Business Management — Data Analytics & Artificial Intelligence**
-- **Bachelor's background in Biology**
+- **MSc — Business Management, Data Analytics & Artificial Intelligence**  
+  Steinbeis University, Berlin, Germany
+- **BSc — Biology**  
+  Istanbul University, Istanbul, Türkiye
 
 ---
 
