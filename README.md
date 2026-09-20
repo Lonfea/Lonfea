@@ -9,6 +9,7 @@
 ![Python](https://img.shields.io/badge/Python-Data%20%26%20ML-informational?logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-informational?logo=pytorch)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-Machine%20Learning-informational?logo=scikitlearn)
+![XGBoost](https://img.shields.io/badge/XGBoost-Ensemble%20Learning-informational)
 ![SQL](https://img.shields.io/badge/SQL-Analytics-informational?logo=postgresql)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Research%20Workflows-informational?logo=jupyter)
 ![Git](https://img.shields.io/badge/Git-Version%20Control-informational?logo=git)
@@ -45,10 +46,10 @@ My work sits at the intersection of **machine learning, environmental and biolog
 `Python` · `SQL` · `Pandas` · `NumPy` · `Jupyter`
 
 **Machine learning**  
-`PyTorch` · `scikit-learn` · `Deep Learning` · `Neural Networks` · `Transformers`
+`PyTorch` · `scikit-learn` · `XGBoost` · `Deep Learning` · `Neural Networks` · `Transformers`
 
 **Applied AI**  
-`Computer Vision` · `NLP` · `Time Series` · `RAG`
+`Computer Vision` · `NLP` · `Time Series` · `Ensemble Learning` · `Explainable AI` · `RAG`
 
 **Scientific data**  
 `Remote Sensing` · `Satellite Imagery` · `Climate Data` · `Biological Data` · `Epidemiological Data`
@@ -67,6 +68,10 @@ My work sits at the intersection of **machine learning, environmental and biolog
 | 🦠 **[Outbreak Analytics](https://github.com/Lonfea/hands-on-outbreak-analytics)** | Epidemiology, RAG, LLM evaluation, climate-sensitive disease modeling |
 | 🌊 **[AI for Tsunami Alerts](https://github.com/Lonfea/intro-ai-tsunami-alerts)** | Earthquake data, classification, early-warning concepts |
 | 🏙️ **[CityLearn](https://github.com/Lonfea/citylearn)** | AI for urban energy systems and intelligent building control |
+| ⚡ **[AI for Optimal Power Flow](https://github.com/Lonfea/optimal-power-flow)** | PyTorch, AC-OPF, physics-aware evaluation, power-system optimization |
+| 🌱 **[Tracking ML Emissions](https://github.com/Lonfea/tracking-ml-emissions)** | Carbon accounting, energy tracking, sustainable and responsible AI |
+| 🌀 **[Hurricane Wind Value-at-Risk](https://github.com/Lonfea/hurricane-wind-var)** | Ensemble weather forecasts, geospatial risk, catastrophe modeling |
+| ☁️ **[PiggyCast](https://github.com/Lonfea/piggy-cast)** | XGBoost stacking, AI weather models, SHAP explainability |
 
 > Several projects above are completed tutorial or participant implementations from the Climate Change AI ecosystem. They are presented as **learning and portfolio implementations**, with original authorship and attribution preserved in each repository.
 
