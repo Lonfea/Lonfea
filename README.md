@@ -2,17 +2,17 @@
 
 # Berkant Duman
 
-### Biology × Artificial Intelligence × Data Analytics × Decision Science
+### Climate Change Management × Artificial Intelligence × Data Analytics × Biology
 
-**Building machine-learning applications for climate, environmental, biological, and business systems.**
+**Building data and AI systems for climate, sustainability, environmental, industrial, and scientific decision-making.**
 
 ![Python](https://img.shields.io/badge/Python-Data%20%26%20ML-informational?logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-informational?logo=pytorch)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-Machine%20Learning-informational?logo=scikitlearn)
-![XGBoost](https://img.shields.io/badge/XGBoost-Ensemble%20Learning-informational)
 ![SQL](https://img.shields.io/badge/SQL-Analytics-informational?logo=postgresql)
+![Docker](https://img.shields.io/badge/Docker-Deployment-informational?logo=docker)
+![MLflow](https://img.shields.io/badge/MLflow-MLOps-informational?logo=mlflow)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Research%20Workflows-informational?logo=jupyter)
-![Git](https://img.shields.io/badge/Git-Version%20Control-informational?logo=git)
 
 </div>
 
@@ -20,11 +20,13 @@
 
 ## About me
 
-I am an **MSc student in Business Management, Data Analytics and Artificial Intelligence at Steinbeis University in Berlin**, building on a **BSc in Biology from Istanbul University**.
+I am an **M.Sc. student in Climate Change Management at Hochschule Weihenstephan-Triesdorf (HSWT)**, with an academic and technical background spanning **Data Analytics & Artificial Intelligence** and a **B.Sc. in Biology from Istanbul University**.
 
-My work sits at the intersection of **machine learning, environmental and biological science, climate research, and data-driven decision-making**. I am especially interested in problems where AI can help turn complex scientific data into useful, interpretable decisions.
+My work sits at the intersection of **climate action, sustainability, machine learning, environmental science, industrial systems, and data-driven decision-making**. I am particularly interested in turning complex scientific and operational data into useful, interpretable tools for real-world decisions.
 
-**Current direction:** AI for climate and environmental systems, computational biology, epidemiology, remote sensing, NLP, time-series modeling, and decision intelligence.
+My current academic path also includes **Business Management, Data Analytics & Artificial Intelligence at Steinbeis University**, strengthening the technical and management side of my climate-focused work.
+
+**Current direction:** climate-tech, sustainability analytics, industrial decarbonization, environmental AI, remote sensing, climate-risk analytics, time-series modeling, MLOps, and decision intelligence.
 
 ---
 
@@ -32,11 +34,12 @@ My work sits at the intersection of **machine learning, environmental and biolog
 
 | Theme | Focus |
 |---|---|
-| **Climate & Environmental AI** | Climate risk, hydrology, downscaling, sustainability |
-| **Remote Sensing** | Satellite imagery, NDVI, land-use and agricultural monitoring |
-| **Biology & Health** | Computational biology, epidemiology, outbreak analytics |
-| **Machine Learning** | Deep learning, transformers, classification, time series |
-| **Decision Intelligence** | Translating models and data into operational and business decisions |
+| **Climate Change Management** | Mitigation, adaptation, climate risk, sustainability and transition strategies |
+| **Climate & Environmental AI** | Hydrology, climate projections, environmental monitoring and decision support |
+| **Industrial & Sustainability Analytics** | Predictive maintenance, operational efficiency, emissions and resource optimization |
+| **Remote Sensing & Geospatial AI** | Satellite imagery, NDVI, land-use and agricultural monitoring |
+| **Machine Learning & MLOps** | Deep learning, anomaly detection, time series, explainability, MLflow and deployment |
+| **Decision Intelligence** | Translating models and data into operational, business and policy decisions |
 
 ---
 
@@ -45,14 +48,14 @@ My work sits at the intersection of **machine learning, environmental and biolog
 **Programming & analytics**  
 `Python` · `SQL` · `Pandas` · `NumPy` · `Power BI` · `Streamlit` · `Jupyter`
 
-**Machine learning**  
-`PyTorch` · `scikit-learn` · `XGBoost` · `Deep Learning` · `Neural Networks` · `Transformers`
+**Machine learning & AI**  
+`PyTorch` · `scikit-learn` · `XGBoost` · `Deep Learning` · `Neural Networks` · `Transformers` · `Anomaly Detection`
 
-**Applied AI**  
-`Computer Vision` · `NLP` · `Time Series` · `Ensemble Learning` · `Explainable AI` · `RAG`
+**Data engineering & deployment**  
+`FastAPI` · `Docker` · `MQTT` · `PostgreSQL` · `MLflow` · `GitHub Actions`
 
-**Scientific data**  
-`Remote Sensing` · `Satellite Imagery` · `Climate Data` · `Biological Data` · `Epidemiological Data`
+**Scientific & climate data**  
+`Remote Sensing` · `Satellite Imagery` · `Climate Data` · `Hydrology` · `Biological Data` · `Geospatial Analytics`
 
 ---
 
@@ -60,45 +63,57 @@ My work sits at the intersection of **machine learning, environmental and biolog
 
 | Project | What it demonstrates |
 |---|---|
-| 🧬 **[Clinical Trial Operations Analytics](https://github.com/Lonfea/clinical-trial-operations-analytics)** | Original end-to-end product: Python, SQL, ETL, Power BI, risk modeling, Streamlit, CI |
+| 🏭 **[IndustrialEdge AI](https://github.com/Lonfea/industrialedge-ai)** | Industrial IoT, MQTT, anomaly detection, predictive maintenance, FastAPI, Docker, MLflow, AI maintenance copilot |
 | 🌳 **[Deforestation Detection](https://github.com/Lonfea/detect-deforestation)** | Sentinel-2, NDVI, satellite-image time series, CNNs, Transformers |
 | 🌊 **[AI-Driven Hydrological Modeling](https://github.com/Lonfea/camels-hydrological-modeling)** | CAMELS, streamflow forecasting, hydrological ML, decision support |
 | 🌡️ **[Climate Projection Downscaling](https://github.com/Lonfea/downscaling-climate-projections)** | Deep learning, climate projections, statistical downscaling |
 | 🛰️ **[Agricultural Monitoring](https://github.com/Lonfea/agricultural-monitoring-ftw)** | Geospatial AI, field boundaries, crop and land monitoring |
 | 📝 **[NLP for Climate Policy](https://github.com/Lonfea/nlp-policy-analysis)** | Supervised NLP, LLM classification, climate-policy analysis |
-| 🦠 **[Outbreak Analytics](https://github.com/Lonfea/hands-on-outbreak-analytics)** | Epidemiology, RAG, LLM evaluation, climate-sensitive disease modeling |
-| 🌊 **[AI for Tsunami Alerts](https://github.com/Lonfea/intro-ai-tsunami-alerts)** | Earthquake data, classification, early-warning concepts |
 | 🏙️ **[CityLearn](https://github.com/Lonfea/citylearn)** | AI for urban energy systems and intelligent building control |
 | ⚡ **[AI for Optimal Power Flow](https://github.com/Lonfea/optimal-power-flow)** | PyTorch, AC-OPF, physics-aware evaluation, power-system optimization |
 | 🌱 **[Tracking ML Emissions](https://github.com/Lonfea/tracking-ml-emissions)** | Carbon accounting, energy tracking, sustainable and responsible AI |
-| 🌀 **[Hurricane Wind Value-at-Risk](https://github.com/Lonfea/hurricane-wind-var)** | Ensemble weather forecasts, geospatial risk, catastrophe modeling |
-| ☁️ **[PiggyCast](https://github.com/Lonfea/piggy-cast)** | XGBoost stacking, AI weather models, SHAP explainability |
+| 🌀 **[Hurricane Wind Value-at-Risk](https://github.com/Lonfea/hurricane-wind-var)** | Ensemble weather forecasts, geospatial risk and catastrophe modeling |
+| ☁️ **[PiggyCast](https://github.com/Lonfea/piggy-cast)** | XGBoost stacking, AI weather models and SHAP explainability |
+| 🧬 **[Clinical Trial Operations Analytics](https://github.com/Lonfea/clinical-trial-operations-analytics)** | End-to-end analytics product: Python, SQL, ETL, risk modeling, Streamlit and CI |
 
-> Several projects above are completed tutorial or participant implementations from the Climate Change AI ecosystem. They are presented as **learning and portfolio implementations**, with original authorship and attribution preserved in each repository.
+> Several climate projects above are completed tutorial or participant implementations from the Climate Change AI ecosystem. They are presented as **learning and portfolio implementations**, with original authorship and attribution preserved in each repository.
 
 ---
 
 ## What I am building toward
 
-I want my work to connect three layers:
+I want my work to connect four layers:
 
-**Scientific understanding** → **machine learning & data systems** → **real-world decisions**
+**Climate & scientific understanding** → **data engineering** → **machine learning & AI** → **real-world decisions**
 
-That means developing projects that are not only accurate, but also **reproducible, interpretable, and useful in practice**.
+I am especially interested in projects where technology can support:
+
+- climate mitigation and adaptation,
+- sustainability and decarbonization,
+- environmental monitoring,
+- resilient infrastructure and industry,
+- energy and resource efficiency,
+- climate-risk and operational decision support.
+
+The goal is not only to build accurate models, but to make them **reproducible, interpretable, deployable, and useful in practice**.
 
 ---
 
 ## Education
 
-- **MSc — Business Management, Data Analytics & Artificial Intelligence**  
+- **M.Sc. — Climate Change Management**  
+  Hochschule Weihenstephan-Triesdorf (HSWT), Germany · **2026–Present**
+
+- **M.Sc. — Business Management, Data Analytics & Artificial Intelligence**  
   Steinbeis University, Berlin, Germany
-- **BSc — Biology**  
+
+- **B.Sc. — Biology**  
   Istanbul University, Istanbul, Türkiye
 
 ---
 
 <div align="center">
 
-### From understanding biological systems to modeling complex systems with data.
+### Climate science, data and AI — connected to real-world decisions.
 
 </div>
