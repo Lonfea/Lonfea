@@ -1,7 +1,7 @@
 import json
 import sqlite3
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 
 class AuditStore:
@@ -31,7 +31,7 @@ class AuditStore:
 
     @staticmethod
     def _now() -> str:
-        return datetime.now(timezone.utc).isoformat()
+        return datetime.now(UTC).isoformat()
 
     def create_run(self, topic: str) -> str:
         run_id = str(uuid.uuid4())
