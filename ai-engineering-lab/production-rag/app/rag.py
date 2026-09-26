@@ -41,7 +41,7 @@ class RAGWorkflow:
                 api_key=self.settings.openai_api_key,
                 temperature=0,
             )
-        return ChatOllama(model=self.settings.ollama_model, temperature=0)
+        return ChatOllama(\n            model=self.settings.ollama_model,\n            base_url=self.settings.ollama_base_url,\n            temperature=0,\n        )
 
     def _retrieve(self, state: RAGState) -> RAGState:
         chunks = [c.to_dict() for c in self.retriever.search(state["question"])]
