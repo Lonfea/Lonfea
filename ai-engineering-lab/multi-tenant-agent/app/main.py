@@ -5,6 +5,7 @@ import uuid
 import stripe
 from fastapi import Depends, FastAPI, HTTPException
 from pydantic import BaseModel, Field
+
 from app.agent import TenantAgent
 from app.billing import record_meter_event
 from app.limiter import TenantLimiter
