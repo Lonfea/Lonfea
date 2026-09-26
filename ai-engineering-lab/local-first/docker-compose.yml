@@ -1,0 +1,26 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+
+  rag:
+    build:
+      context: ../production-rag
+    ports:
+      - "8002:8000"
+    environment:
+      MODEL_PROVIDER: ollama
+      OLLAMA_MODEL: llama3.2:3b
+      OLLAMA_BASE_URL: http://ollama:11434
+      DATABASE_PATH: /data/rag.db
+    volumes:
+      - rag-data:/data
+    depends_on:
+      - ollama
+
+volumes:
+  ollama-data:
+  rag-data:
