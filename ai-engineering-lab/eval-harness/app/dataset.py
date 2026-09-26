@@ -1,4 +1,3 @@
-import json
 from pathlib import Path
 
 from app.models import GoldenCase
