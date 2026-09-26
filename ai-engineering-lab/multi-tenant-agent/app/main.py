@@ -5,12 +5,11 @@ import uuid
 import stripe
 from fastapi import Depends, FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from supabase import create_client
-
 from app.agent import TenantAgent
 from app.billing import record_meter_event
 from app.limiter import TenantLimiter
 from app.tenant import resolve_tenant, tenant_headers
+from supabase import create_client
 
 supabase = create_client(
     os.environ["SUPABASE_URL"],
