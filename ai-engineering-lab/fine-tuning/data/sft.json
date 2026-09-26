@@ -1,0 +1,10 @@
+[
+  {
+    "prompt": "Explain why an AI evaluation threshold should be treated separately from a measured score.",
+    "completion": "A threshold is a release criterion chosen in advance; a measured score is evidence produced by an actual evaluation run. Keeping them separate prevents fabricated performance claims."
+  },
+  {
+    "prompt": "What should a production RAG system do when retrieved evidence is insufficient?",
+    "completion": "It should explicitly abstain or state that the evidence is insufficient rather than inventing an answer, and it should preserve traceability to the retrieved sources."
+  }
+]
