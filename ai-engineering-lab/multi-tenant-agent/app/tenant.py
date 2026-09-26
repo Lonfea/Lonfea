@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 
 from fastapi import Header, HTTPException
+
 from supabase import Client
 
 
