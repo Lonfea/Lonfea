@@ -59,6 +59,35 @@ My current academic path also includes **Business Management, Data Analytics & A
 
 ---
 
+## Production AI Engineering Lab
+
+I am also building a production-focused AI systems lab covering the engineering concerns that appear after a prototype becomes a service:
+
+| System | Production concern |
+|---|---|
+| **Production RAG** | hybrid retrieval, reranking, page citations, grounding |
+| **Model Router** | cost/quality routing, spend and latency metrics |
+| **Multi-Agent Research** | supervision, fact-checking, consensus, audit trail |
+| **AI Eval Harness** | 120 golden cases, DeepEval/RAGAS, regression gates |
+| **Observability** | OpenTelemetry, Prometheus, Grafana, alerting |
+| **Security Guardrails** | injection screening, PII/secrets, quotas, safe tools |
+| **Local-First AI** | Ollama, Docker, local retrieval, zero API-cost development |
+| **Streaming Copilot** | token streaming, cancellation, retry and error recovery |
+| **Fine-Tuning** | LoRA SFT, DPO, before/after and forgetting gates |
+| **Multi-Tenant Agent** | Supabase RLS, tenant quotas, Stripe usage metering |
+| **AI CI/CD** | eval-gated release, Argo canary analysis and rollback |
+| **Vector Search** | Qdrant dense+sparse RRF, filters, caching, snapshots |
+| **Agent Memory** | Redis short-term + semantic long-term recall |
+| **Inference Serving** | vLLM on Kubernetes, caching, quantization pattern |
+| **Human Approval** | durable LangGraph pause/resume and audit |
+| **Automation** | webhooks, Celery, idempotency, retry/backoff, DLQ |
+| **Climate Policy Benchmark** | domain-specific grounded QA benchmark scaffold |
+| **Open Source Track** | evidence-based upstream contribution workflow |
+
+**Code:** `ai-engineering-lab/` in this repository. Measured performance is only reported after a real benchmark or deployment run; targets and architecture claims are not presented as measured results.
+
+---
+
 ## Selected portfolio
 
 | Project | What it demonstrates |
