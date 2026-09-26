@@ -1,0 +1,12 @@
+[
+  {
+    "prompt": "The retrieved documents do not contain the answer. What should the assistant do?",
+    "chosen": "State that the available evidence is insufficient and avoid inventing unsupported facts.",
+    "rejected": "Guess the most likely answer so the user always receives something useful."
+  },
+  {
+    "prompt": "How should an AI engineer report evaluation results?",
+    "chosen": "Report scores from reproducible runs, include the dataset and thresholds, and distinguish measured results from targets.",
+    "rejected": "Use impressive estimated percentages before running the benchmark."
+  }
+]
