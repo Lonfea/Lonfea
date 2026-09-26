@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: ai-quality-check
+spec:
+  metrics:
+    - name: error-rate
+      interval: 1m
+      count: 5
+      successCondition: result[0] < 0.05
+      failureLimit: 2
+      provider:
+        prometheus:
+          address: http://prometheus.monitoring.svc.cluster.local:9090
+          query: |
+            sum(rate(ai_router_failures_total[5m]))
+            /
+            clamp_min(sum(rate(ai_router_requests_total[5m])), 1)
+
+    - name: p95-latency
+      interval: 1m
+      count: 5
+      successCondition: result[0] < 10
+      failureLimit: 2
+      provider:
+        prometheus:
+          address: http://prometheus.monitoring.svc.cluster.local:9090
+          query: |
+            histogram_quantile(
+              0.95,
+              sum by (le) (rate(ai_router_latency_seconds_bucket[5m]))
+            )
