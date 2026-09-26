@@ -1,6 +1,6 @@
 from pathlib import Path
-from typing import Annotated
 from tempfile import NamedTemporaryFile
+from typing import Annotated
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from pydantic import BaseModel, Field
