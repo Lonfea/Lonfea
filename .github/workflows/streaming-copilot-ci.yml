@@ -1,0 +1,29 @@
+name: streaming-copilot-ci
+
+on:
+  push:
+    paths:
+      - "ai-engineering-lab/streaming-copilot/**"
+      - ".github/workflows/streaming-copilot-ci.yml"
+  pull_request:
+    paths:
+      - "ai-engineering-lab/streaming-copilot/**"
+      - ".github/workflows/streaming-copilot-ci.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai-engineering-lab/streaming-copilot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: ai-engineering-lab/streaming-copilot/package-lock.json
+      - run: npm install
+      - run: npm run build
+        env:
+          AI_GATEWAY_API_KEY: placeholder
