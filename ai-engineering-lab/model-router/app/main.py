@@ -1,7 +1,6 @@
 import time
 import uuid
 
-import litellm
 from fastapi import FastAPI, HTTPException, Response
 from litellm import acompletion
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
@@ -42,12 +41,8 @@ async def _call(model: str, prompt: str):
 
 def _response_cost(response) -> float:
     hidden = getattr(response, "_hidden_params", {}) or {}
-    if hidden.get("response_cost") is not None:
-        return float(hidden["response_cost"])
-    try:
-        return float(litellm.completion_cost(completion_response=response))
-    except Exception:
-        return 0.0
+    value = hidden.get("response_cost")
+    return float(value) if value is not None else 0.0
 
 
 @app.get("/health")
