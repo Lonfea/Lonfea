@@ -1,0 +1,56 @@
+name: ai-release
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: "Immutable image tag to deploy"
+        required: true
+        type: string
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install eval harness
+        working-directory: ai-engineering-lab/eval-harness
+        run: pip install -e ".[dev]"
+      - name: Run AI evaluation suite
+        working-directory: ai-engineering-lab/eval-harness
+        env:
+          TARGET_URL: ${{ secrets.EVAL_TARGET_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
+          LANGSMITH_TRACING: "true"
+        run: python -m app.runner
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-eval-report
+          path: ai-engineering-lab/eval-harness/reports/latest.json
+
+  deploy-canary:
+    needs: quality-gate
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Argo Rollouts kubectl plugin
+        run: |
+          curl -sLO https://github.com/argoproj/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-linux-amd64
+          chmod +x ./kubectl-argo-rollouts-linux-amd64
+          sudo mv ./kubectl-argo-rollouts-linux-amd64 /usr/local/bin/kubectl-argo-rollouts
+      - name: Configure Kubernetes
+        env:
+          KUBECONFIG_B64: ${{ secrets.KUBECONFIG_B64 }}
+        run: |
+          echo "$KUBECONFIG_B64" | base64 -d > kubeconfig
+          echo "KUBECONFIG=$PWD/kubeconfig" >> "$GITHUB_ENV"
+      - name: Update candidate image
+        run: |
+          kubectl argo rollouts set image ai-service             api=ghcr.io/lonfea/ai-service:${{ inputs.image_tag }}
+      - name: Wait for progressive delivery
+        run: kubectl argo rollouts status ai-service --timeout 30m
