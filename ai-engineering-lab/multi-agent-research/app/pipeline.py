@@ -128,9 +128,9 @@ class ResearchPipeline:
         fact = outputs[-2].pydantic
         supervisor = outputs[-1].pydantic
         if not isinstance(fact, FactCheckReport):
-            raise RuntimeError("Fact checker did not return the required structured output.")
+            raise TypeError("Fact checker did not return the required structured output.")
         if not isinstance(supervisor, SupervisorDecision):
-            raise RuntimeError("Supervisor did not return the required structured output.")
+            raise TypeError("Supervisor did not return the required structured output.")
 
         consensus = (
             fact.verification_score >= self.fact_check_threshold
