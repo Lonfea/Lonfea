@@ -59,53 +59,63 @@ My current academic path also includes **Business Management, Data Analytics & A
 
 ---
 
-## Production AI Engineering Lab
+## Featured projects
 
-I am also building a production-focused AI systems lab covering the engineering concerns that appear after a prototype becomes a service:
-
-| System | Production concern |
-|---|---|
-| **Production RAG** | hybrid retrieval, reranking, page citations, grounding |
-| **Model Router** | cost/quality routing, spend and latency metrics |
-| **Multi-Agent Research** | supervision, fact-checking, consensus, audit trail |
-| **AI Eval Harness** | 120 golden cases, DeepEval/RAGAS, regression gates |
-| **Observability** | OpenTelemetry, Prometheus, Grafana, alerting |
-| **Security Guardrails** | injection screening, PII/secrets, quotas, safe tools |
-| **Local-First AI** | Ollama, Docker, local retrieval, zero API-cost development |
-| **Streaming Copilot** | token streaming, cancellation, retry and error recovery |
-| **Fine-Tuning** | LoRA SFT, DPO, before/after and forgetting gates |
-| **Multi-Tenant Agent** | Supabase RLS, tenant quotas, Stripe usage metering |
-| **AI CI/CD** | eval-gated release, Argo canary analysis and rollback |
-| **Vector Search** | Qdrant dense+sparse RRF, filters, caching, snapshots |
-| **Agent Memory** | Redis short-term + semantic long-term recall |
-| **Inference Serving** | vLLM on Kubernetes, caching, quantization pattern |
-| **Human Approval** | durable LangGraph pause/resume and audit |
-| **Automation** | webhooks, Celery, idempotency, retry/backoff, DLQ |
-| **Climate Policy Benchmark** | domain-specific grounded QA benchmark scaffold |
-| **Open Source Track** | evidence-based upstream contribution workflow |
-
-**Code:** `ai-engineering-lab/` in this repository. Measured performance is only reported after a real benchmark or deployment run; targets and architecture claims are not presented as measured results.
-
----
-
-## Selected portfolio
+Original projects — designed and implemented by me, each with tests, CI and Docker.
 
 | Project | What it demonstrates |
 |---|---|
-| 🏭 **[IndustrialEdge AI](https://github.com/Lonfea/industrialedge-ai)** | Industrial IoT, MQTT, anomaly detection, predictive maintenance, FastAPI, Docker, MLflow, AI maintenance copilot |
-| 🌳 **[Deforestation Detection](https://github.com/Lonfea/detect-deforestation)** | Sentinel-2, NDVI, satellite-image time series, CNNs, Transformers |
-| 🌊 **[AI-Driven Hydrological Modeling](https://github.com/Lonfea/camels-hydrological-modeling)** | CAMELS, streamflow forecasting, hydrological ML, decision support |
-| 🌡️ **[Climate Projection Downscaling](https://github.com/Lonfea/downscaling-climate-projections)** | Deep learning, climate projections, statistical downscaling |
-| 🛰️ **[Agricultural Monitoring](https://github.com/Lonfea/agricultural-monitoring-ftw)** | Geospatial AI, field boundaries, crop and land monitoring |
-| 📝 **[NLP for Climate Policy](https://github.com/Lonfea/nlp-policy-analysis)** | Supervised NLP, LLM classification, climate-policy analysis |
-| 🏙️ **[CityLearn](https://github.com/Lonfea/citylearn)** | AI for urban energy systems and intelligent building control |
-| ⚡ **[AI for Optimal Power Flow](https://github.com/Lonfea/optimal-power-flow)** | PyTorch, AC-OPF, physics-aware evaluation, power-system optimization |
-| 🌱 **[Tracking ML Emissions](https://github.com/Lonfea/tracking-ml-emissions)** | Carbon accounting, energy tracking, sustainable and responsible AI |
-| 🌀 **[Hurricane Wind Value-at-Risk](https://github.com/Lonfea/hurricane-wind-var)** | Ensemble weather forecasts, geospatial risk and catastrophe modeling |
-| ☁️ **[PiggyCast](https://github.com/Lonfea/piggy-cast)** | XGBoost stacking, AI weather models and SHAP explainability |
-| 🧬 **[Clinical Trial Operations Analytics](https://github.com/Lonfea/clinical-trial-operations-analytics)** | End-to-end analytics product: Python, SQL, ETL, risk modeling, Streamlit and CI |
+| 🏭 **[IndustrialEdge AI](https://github.com/Lonfea/industrialedge-ai)** | Industrial IoT, MQTT, anomaly detection, predictive maintenance, FastAPI, MLflow |
+| 🛠️ **[Enterprise IT Incident Automation](https://github.com/Lonfea/enterprise-it-incident-automation)** | Incident detection, ML-based routing, SLA monitoring, governed AI workflow |
+| 🧬 **[Clinical Trial Operations Analytics](https://github.com/Lonfea/clinical-trial-operations-analytics)** | End-to-end analytics: Python, SQL, ETL, site-risk modeling, Streamlit |
+| 🔬 **[Semiconductor Supplier Intelligence](https://github.com/Lonfea/semiconductor-supplier-intelligence)** | Capacity normalization, explainable supplier-risk scoring, cited briefs |
+| 🌍 **[Supplier Sustainability Risk](https://github.com/Lonfea/supplier-sustainability-risk-platform)** | Supplier emissions, climate exposure, due-diligence risk prioritization |
 
-> Several climate projects above are completed tutorial or participant implementations from the Climate Change AI ecosystem. They are presented as **learning and portfolio implementations**, with original authorship and attribution preserved in each repository.
+Business-domain projects use synthetic or public datasets.
+
+---
+
+## AI engineering projects
+
+Compact services that each target one engineering concern of LLM applications.
+
+| Project | Focus |
+|---|---|
+| **[RAG with Page Citations](https://github.com/Lonfea/production-rag-citations)** | hybrid retrieval, reranking, grounding, citations |
+| **[Cost-Optimized Model Router](https://github.com/Lonfea/cost-optimized-model-router)** | complexity-based routing, fallbacks, spend and latency metrics |
+| **[Multi-Agent Research System](https://github.com/Lonfea/multi-agent-research-system)** | specialist agents, fact-checking, consensus, human approval |
+| **[AI Evaluation Harness](https://github.com/Lonfea/ai-evaluation-harness)** | 120 golden cases, DeepEval/RAGAS metrics, regression gate |
+| **[LLM Security Guardrails](https://github.com/Lonfea/llm-security-guardrails)** | injection screening, PII/secret redaction, rate limits, safe tools |
+| **[Agentic Automation Platform](https://github.com/Lonfea/agentic-automation-platform)** | webhooks, Celery, idempotency, retry/backoff, dead-letter queue |
+
+Earlier-stage work lives in [`ai-engineering-lab/`](./ai-engineering-lab):
+
+| Module | Stage |
+|---|---|
+| Agent memory, vector search, human-in-the-loop, multi-tenant agent, LoRA/DPO fine-tuning, climate-policy benchmark | Prototype with tests |
+| Observability stack, vLLM inference serving, AI CI/CD, local-first setup, streaming UI | Reference configuration |
+| Open-source contribution track | Not started |
+
+Performance numbers are only reported after a real benchmark or deployment run.
+
+---
+
+## Learning implementations
+
+Completed tutorials from the [Climate Change AI](https://www.climatechange.ai/) summer school and tutorial series. Original authorship and attribution are preserved in each repository.
+
+- 🌳 [Deforestation Detection](https://github.com/Lonfea/detect-deforestation) — Sentinel-2, NDVI, satellite-image time series
+- 🌊 [Hydrological Modeling](https://github.com/Lonfea/camels-hydrological-modeling) — CAMELS streamflow forecasting
+- 🌡️ [Climate Projection Downscaling](https://github.com/Lonfea/downscaling-climate-projections) — deep-learning statistical downscaling
+- 🛰️ [Agricultural Monitoring](https://github.com/Lonfea/agricultural-monitoring-ftw) — field boundaries, crop monitoring
+- 📝 [NLP for Climate Policy](https://github.com/Lonfea/nlp-policy-analysis) — supervised NLP, LLM classification
+- 🏙️ [CityLearn](https://github.com/Lonfea/citylearn) — reinforcement learning for building energy control
+- ⚡ [Optimal Power Flow](https://github.com/Lonfea/optimal-power-flow) — PyTorch AC-OPF approximation
+- 🌱 [Tracking ML Emissions](https://github.com/Lonfea/tracking-ml-emissions) — carbon accounting for model training
+- 🌀 [Hurricane Wind Value-at-Risk](https://github.com/Lonfea/hurricane-wind-var) — ensemble forecasts, catastrophe risk
+- ☁️ [PiggyCast](https://github.com/Lonfea/piggy-cast) — stacked weather-model ensemble, SHAP
+- 🦠 [Outbreak Analytics](https://github.com/Lonfea/hands-on-outbreak-analytics) — dengue forecasting, RAG and LLM evaluation
+- 🌋 [Tsunami Alerts](https://github.com/Lonfea/intro-ai-tsunami-alerts) — introductory ML classification
 
 ---
 
