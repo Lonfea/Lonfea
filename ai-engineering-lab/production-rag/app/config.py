@@ -8,6 +8,7 @@ class Settings(BaseSettings):
 
     model_provider: str = "ollama"
     ollama_model: str = "llama3.2:3b"
+    ollama_base_url: str | None = None
     openai_model: str = "gpt-4.1-mini"
     openai_api_key: str | None = None
 
