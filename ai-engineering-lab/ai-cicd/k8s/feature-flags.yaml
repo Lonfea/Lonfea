@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ai-feature-flags
+data:
+  flags.json: |
+    {
+      "new_reranker": false,
+      "premium_router_v2": false,
+      "streaming_ui_v2": false
+    }
