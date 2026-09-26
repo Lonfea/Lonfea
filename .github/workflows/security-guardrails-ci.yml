@@ -1,0 +1,27 @@
+name: security-guardrails-ci
+
+on:
+  push:
+    paths:
+      - "ai-engineering-lab/security-guardrails/**"
+      - ".github/workflows/security-guardrails-ci.yml"
+  pull_request:
+    paths:
+      - "ai-engineering-lab/security-guardrails/**"
+      - ".github/workflows/security-guardrails-ci.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai-engineering-lab/security-guardrails
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: pytest -q
