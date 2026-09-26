@@ -1,0 +1,25 @@
+groups:
+  - name: ai-services
+    rules:
+      - alert: AIRouterHighFailureRate
+        expr: |
+          sum(rate(ai_router_failures_total[5m]))
+          /
+          clamp_min(sum(rate(ai_router_requests_total[5m])), 1) > 0.05
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "AI router failure rate above 5%"
+
+      - alert: AIRouterHighP95Latency
+        expr: |
+          histogram_quantile(
+            0.95,
+            sum by (le) (rate(ai_router_latency_seconds_bucket[5m]))
+          ) > 10
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "AI router p95 latency above 10 seconds"
