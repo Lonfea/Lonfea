@@ -1,5 +1,5 @@
-import ast
 import operator
+import ast
 
 
 _BINARY = {
