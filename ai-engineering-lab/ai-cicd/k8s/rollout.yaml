@@ -1,0 +1,51 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: ai-service
+spec:
+  replicas: 4
+  strategy:
+    canary:
+      stableService: ai-service-stable
+      canaryService: ai-service-canary
+      trafficRouting:
+        nginx:
+          stableIngress: ai-service
+      steps:
+        - setWeight: 10
+        - pause:
+            duration: 5m
+        - analysis:
+            templates:
+              - templateName: ai-quality-check
+        - setWeight: 50
+        - pause:
+            duration: 10m
+        - analysis:
+            templates:
+              - templateName: ai-quality-check
+        - setWeight: 100
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: ai-service
+  template:
+    metadata:
+      labels:
+        app: ai-service
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/lonfea/ai-service:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: FEATURE_FLAGS_FILE
+              value: /etc/ai-flags/flags.json
+          volumeMounts:
+            - name: feature-flags
+              mountPath: /etc/ai-flags
+      volumes:
+        - name: feature-flags
+          configMap:
+            name: ai-feature-flags
