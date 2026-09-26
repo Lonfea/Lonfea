@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Annotated
 from tempfile import NamedTemporaryFile
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
@@ -43,7 +44,7 @@ def health() -> dict:
 
 
 @app.post("/ingest")
-async def ingest(file: UploadFile = File(...)) -> dict:
+async def ingest(file: Annotated[UploadFile, File(...)]) -> dict:
     if not (file.filename or "").lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files are supported.")
 
